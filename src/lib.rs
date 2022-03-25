@@ -7,7 +7,7 @@
 
 // Based on the new Squares RNG algorthim
 // <https://arxiv.org/pdf/2004.06278v3.pdf>
-mod squaresrng {    
+pub mod squaresrng {    
     pub struct SquaresRNG {
         pub key: u64, // Unsigned Integer where half of the bits are 1 and the other half are 0.
         pub counter: u64,
@@ -52,6 +52,7 @@ mod squaresrng {
             return (u64::wrapping_add(u64::wrapping_mul(x,x), z) >> 32) as u64;
         }
 
+        /// Returns a random usize within a range. For picking random elements in an array or Vec.
         pub fn rand_index(&mut self, size: u64) -> usize {
             let rand: u64 = self.rand_u64() % SquaresRNG::U64_REMAINDER;
             (rand % size) as usize
@@ -113,6 +114,7 @@ mod squaresrng {
             min + (max - min) * self.randf64()
         }
 
+        /// Returns a random i64 between min and max.
         pub fn rangei64(&mut self, min: i64, max: i64) -> i64 {
             self.rangef64(min as f64, max as f64).round() as i64
         }

@@ -4,3 +4,6 @@ version = "0.1.0"
 edition = "2021"
 authors = ["Phobos001 <phobos001@ahi.coffee>"]
 description = "A Rust implementation of Squares RNG for game development."
+license = "MIT OR Apache-2.0"
+keywords = ["gamedev", "random", "rng"]
+readme = "README.md"
