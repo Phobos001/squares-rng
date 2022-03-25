@@ -1,0 +1,6 @@
+[package]
+name = "squares-rng"
+version = "0.1.0"
+edition = "2021"
+authors = ["Phobos001 <phobos001@ahi.coffee>"]
+description = "A Rust implementation of Squares RNG for game development. https://arxiv.org/pdf/2004.06278v3.pdf"
