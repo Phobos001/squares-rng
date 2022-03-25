@@ -16,8 +16,6 @@ pub mod squaresrng {
     impl SquaresRNG {
         const U64_REMAINDER: u64 = u32::MAX as u64;
         const TEST_COUNT: u64 = 10000;
-        const TEST_RANGE_LINEAR_MIN: f64 = 0.45;
-        const TEST_RANGE_LINEAR_MAX: f64 = 0.55;
 
         /// Requires a key to be picked for number generation. A unique combo of counter and key will provide the same number each time.
         /// A single key can generate 2^64 random numbers
