@@ -52,6 +52,11 @@ mod squaresrng {
             return (u64::wrapping_add(u64::wrapping_mul(x,x), z) >> 32) as u64;
         }
 
+        pub fn rand_index(&mut self, size: u64) -> usize {
+            let rand: u64 = self.rand_u64() % SquaresRNG::U64_REMAINDER;
+            (rand % size) as usize
+        }
+
         /// Returns a random f32 between 0 and 1
         pub fn randf32(&mut self) -> f32 {
             // Since self.rand() will count up through each unique u64 number, we need to do something to 
