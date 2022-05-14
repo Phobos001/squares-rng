@@ -4,7 +4,6 @@ pub mod keys_table {
     /// Each key can make 2^64 random numbers. This should be enough, right?
     /// 
     /// Table was generated from the 'keys' program provided by the Squares V2 program included with the article.
-    /// Starting point of 65536 generating 262144 keys.
     /// 
     /// Sometime down the road I'd like to be able to generate this at runtime. Right now it's recommended to
     /// pick some to use for your application. Please don't embed the table itself if you don't have to, it's very large. 
