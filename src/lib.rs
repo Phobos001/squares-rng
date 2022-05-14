@@ -1,15 +1,19 @@
 //! This is an implementation of Squares RNG that is primarily for game development. The focus is on random floating point numbers, signed integers, and
 //! additional utilities. This crate does not include key generation, but provides 8192 keys to choose from in a different file.
 //! You may also use your own key if you have one.
+//! 
+//! The creators of Squares RNG have a website for the algorithm now!
+//! <>>https://squaresrng.wixsite.com/rand>
+//! 
+//! The algorithm is explained in this paper
+//! <https://arxiv.org/pdf/2004.06278v3.pdf>
 #![crate_type = "lib"]
 
 #[cfg(feature = "keys_table")]
 mod keys_table;
 
-// Based on the new Squares RNG algorthim
-// <https://arxiv.org/pdf/2004.06278v3.pdf>
 pub struct SquaresRNG {
-    pub key: u64, // Unsigned Integer where half of the bits are 1 and the other half are 0.
+    pub key: u64,
     pub counter: u64,
 }
 
